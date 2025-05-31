@@ -1,0 +1,5 @@
+com\trainapp\model\Trajet.class
+com\trainapp\util\HibernateUtil.class
+com\trainapp\controller\TrajetServlet.class
+com\trainapp\controller\TestServlet.class
+com\trainapp\dao\TrajetDAO.class

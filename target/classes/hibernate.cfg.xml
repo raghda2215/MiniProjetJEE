@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+    <session-factory>
+
+        <!-- Connexion à la base de données MySQL -->
+        <property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/train_ticket_app?useSSL=false&amp;serverTimezone=UTC</property>
+        <property name="hibernate.connection.username">root</property>
+        <property name="hibernate.connection.password"></property>
+
+        <!-- Dialecte pour MySQL -->
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQL8Dialect</property>
+
+        <!-- Affichage des requêtes SQL dans la console -->
+        <property name="hibernate.show_sql">true</property>
+        <property name="hibernate.format_sql">true</property>
+
+        <!-- Création automatique des tables (optionnel en développement) -->
+        <property name="hibernate.hbm2ddl.auto">update</property>
+
+        <!-- Mapping des entités -->
+        <mapping class="com.trainapp.model.Trajet"/>
+        <mapping class="com.trainapp.model.Reservation"/>
+        <mapping class="com.trainapp.model.Utilisateur"/>
+        <mapping class="com.trainapp.model.Billet"/>
+        <mapping class="com.trainapp.model.Gare"/>
+        <mapping class="com.trainapp.model.Voyage"/>
+        <mapping class="com.trainapp.model.Paiement"/>
+        <mapping class="com.trainapp.model.DemandeRemboursement"/>
+        
+        
+      <mapping class="com.trainapp.model.Employe"/>
+        
+        <mapping class="com.trainapp.model.Affectation"/>
+
+    </session-factory>
+</hibernate-configuration>
